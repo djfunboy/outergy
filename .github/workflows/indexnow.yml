@@ -1,0 +1,23 @@
+name: IndexNow
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wait for Netlify deploy
+        run: sleep 90
+      - name: Submit sitemap URLs to IndexNow
+        run: |
+          HOST="outergy.com"
+          KEY="f4dbada116404034895fa6b6de485c60"
+          curl -s "https://$HOST/sitemap.xml" \
+            | grep -o '<loc>[^<]*</loc>' | sed 's/<[^>]*>//g' | head -500 \
+            | python3 -c '
+          import json, sys
+          urls = [l.strip() for l in sys.stdin if l.strip()]
+          host = "outergy.com"; key = "f4dbada116404034895fa6b6de485c60"
+          print(json.dumps({"host": host, "key": key, "keyLocation": f"https://{host}/{key}.txt", "urlList": urls}))' \
+            | curl -s -X POST -H "Content-Type: application/json; charset=utf-8" -d @- -w '\nHTTP %{http_code}\n' https://api.indexnow.org/indexnow

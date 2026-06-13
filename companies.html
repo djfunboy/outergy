@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Companies | Outergy</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <meta name="description" content="Outergy portfolio companies — Stash, Remind, Degree Daddy, Dance Party, 50X, Matrix Desktop, and SiteCapture. Mac apps, iOS apps, and SaaS ventures.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://outergy.com/companies.html">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://outergy.com/companies.html">
+    <meta property="og:title" content="Our Companies | Outergy">
+    <meta property="og:description" content="Outergy portfolio companies — Stash, Remind, Degree Daddy, Dance Party, 50X, Matrix Desktop, and SiteCapture. Mac apps, iOS apps, and SaaS ventures.">
+    <meta property="og:site_name" content="Outergy">
+    <meta property="og:image" content="https://outergy.com/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Our Companies | Outergy">
+    <meta name="twitter:description" content="Outergy portfolio companies — Stash, Remind, Degree Daddy, Dance Party, 50X, Matrix Desktop, and SiteCapture. Mac apps, iOS apps, and SaaS ventures.">
+    <meta name="twitter:image" content="https://outergy.com/og-image.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --bg: #0a0a0a;
+            --text: #fafafa;
+            --text-muted: #737373;
+            --accent: #22c55e;
+            --accent-glow: rgba(34, 197, 94, 0.15);
+        }
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+        }
+        nav {
+            padding: 1.5rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 1.75rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            text-decoration: none;
+            color: var(--text);
+        }
+        .logo span { color: var(--accent); }
+        .nav-contact {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            padding: 0.6rem 1.2rem;
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        .nav-contact:hover {
+            color: var(--text);
+            border-color: rgba(255,255,255,0.3);
+        }
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 2rem 6rem;
+        }
+        .page-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        h1 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            margin-bottom: 0.75rem;
+        }
+        .page-subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        .company-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            padding: 2rem;
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 16px;
+            margin-bottom: 1.5rem;
+            transition: border-color 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+        .company-card:hover {
+            border-color: rgba(255,255,255,0.2);
+        }
+        .company-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 10px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+        .company-icon-placeholder {
+            width: 48px;
+            height: 48px;
+            border-radius: 10px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            background: rgba(255,255,255,0.05);
+            color: var(--accent);
+        }
+        .company-info {
+            flex: 1;
+        }
+        .company-name {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+        .company-url {
+            font-size: 0.85rem;
+            color: var(--accent);
+            margin-bottom: 0.75rem;
+        }
+        .company-desc {
+            color: var(--text-muted);
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+        .company-tags {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 0.75rem;
+            flex-wrap: wrap;
+        }
+        .company-tag {
+            font-size: 0.75rem;
+            padding: 0.25rem 0.6rem;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 50px;
+            color: var(--text-muted);
+        }
+        footer {
+            padding: 1.5rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+        footer a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        footer a:hover { color: var(--text); }
+        @media (max-width: 768px) {
+            nav { padding: 1rem 1.5rem; }
+            .content { padding: 2rem 1.5rem 4rem; }
+            h1 { font-size: 2rem; }
+            .company-card {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1.5rem;
+            }
+            footer {
+                padding: 1rem 1.5rem;
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+        }
+    </style>
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "@id": "https://outergy.com/companies.html",
+        "url": "https://outergy.com/companies.html",
+        "name": "Our Companies | Outergy",
+        "description": "Outergy portfolio companies — Stash, Remind, Degree Daddy, Dance Party, 50X, Matrix Desktop, and SiteCapture. Mac apps, iOS apps, and SaaS ventures.",
+        "isPartOf": {
+            "@type": "WebSite",
+            "url": "https://outergy.com",
+            "name": "Outergy"
+        },
+        "about": {
+            "@type": "Organization",
+            "@id": "https://outergy.com/#organization",
+            "name": "Outergy Group, LLC",
+            "url": "https://outergy.com"
+        },
+        "mainEntity": {
+            "@type": "ItemList",
+            "itemListElement": [
+                { "@type": "ListItem", "position": 1, "name": "Stash", "url": "https://yourstash.ai" },
+                { "@type": "ListItem", "position": 2, "name": "Remind", "url": "https://remind.ing" },
+                { "@type": "ListItem", "position": 3, "name": "Degree Daddy", "url": "https://degreedaddy.com" },
+                { "@type": "ListItem", "position": 4, "name": "Dance Party", "url": "https://danceparty.ai" },
+                { "@type": "ListItem", "position": 5, "name": "50X", "url": "https://50x.ing" },
+                { "@type": "ListItem", "position": 6, "name": "Matrix Desktop", "url": "https://matrix.watch" },
+                { "@type": "ListItem", "position": 7, "name": "SiteCapture", "url": "https://www.sitecapture.com" },
+                { "@type": "ListItem", "position": 8, "name": "DJ Fun Boy", "url": "https://djfunboy.com" },
+                { "@type": "ListItem", "position": 9, "name": "Design Daddy", "url": "https://designdaddy.ai" },
+                { "@type": "ListItem", "position": 10, "name": "Joint Chiefs", "url": "https://jointchiefs.ai" },
+                { "@type": "ListItem", "position": 11, "name": "Pongo", "url": "https://pongo.ing" }
+            ]
+        }
+    }
+    </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SC5K0KLTD9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SC5K0KLTD9');
+  </script>
+</head>
+<body>
+    <nav>
+        <a href="/" class="logo">Outergy<span>.</span></a>
+        <a href="mailto:chris@outergy.com" class="nav-contact">Get in Touch</a>
+    </nav>
+
+    <div class="content">
+        <div class="page-header">
+            <h1>Our Companies</h1>
+            <p class="page-subtitle">A growing portfolio of products and ventures we're building.</p>
+        </div>
+
+        <a href="https://yourstash.ai" target="_blank" rel="noopener noreferrer" class="company-card">
+            <img src="images/stash-icon.png" alt="Stash" class="company-icon">
+            <div class="company-info">
+                <div class="company-name">Stash</div>
+                <div class="company-url">yourstash.ai</div>
+                <p class="company-desc">A native macOS menu bar app that combines clipboard management with screenshot annotation. Keep a 30-day searchable history of everything you copy and capture annotated screenshots with a global hotkey.</p>
+                <div class="company-tags">
+                    <span class="company-tag">macOS</span>
+                    <span class="company-tag">Productivity</span>
+                    <span class="company-tag">Clipboard Manager</span>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://remind.ing" target="_blank" rel="noopener noreferrer" class="company-card">
+            <img src="images/remind-icon.png" alt="Remind" class="company-icon">
+            <div class="company-info">
+                <div class="company-name">Remind</div>
+                <div class="company-url">remind.ing</div>
+                <p class="company-desc">A macOS app that delivers full-screen meeting reminders with optional AI-generated attendee briefings, so busy professionals never miss a calendar event and always show up prepared.</p>
+                <div class="company-tags">
+                    <span class="company-tag">macOS</span>
+                    <span class="company-tag">Productivity</span>
+                    <span class="company-tag">Calendar</span>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://degreedaddy.com" target="_blank" rel="noopener noreferrer" class="company-card">
+            <img src="images/degreedaddy-icon.png" alt="Degree Daddy" class="company-icon">
+            <div class="company-info">
+                <div class="company-name">Degree Daddy</div>
+                <div class="company-url">degreedaddy.com</div>
+                <p class="company-desc">A cold plunge and sauna tracker for iPhone, iPad, and Apple Watch. Syncs with Apple Health and Strava to log sessions with temperature, duration, and streak tracking.</p>
+                <div class="company-tags">
+                    <span class="company-tag">iOS</span>
+                    <span class="company-tag">Apple Watch</span>
+                    <span class="company-tag">Health & Fitness</span>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://danceparty.ai" target="_blank" rel="noopener noreferrer" class="company-card">
+            <img src="images/danceparty-icon.png" alt="Dance Party" class="company-icon">
+            <div class="company-info">
+                <div class="company-name">Dance Party</div>
+                <div class="company-url">danceparty.ai</div>
+                <p class="company-desc">A widget platform for Apple TV office displays. Sales leaderboards, meeting schedules, Slack-to-screen messaging, walk-up songs, and AI daily digests — all managed from a browser and running natively on Apple TV.</p>
+                <div class="company-tags">
+                    <span class="company-tag">tvOS</span>
+                    <span class="company-tag">SaaS</span>
+                    <span class="company-tag">Office Tech</span>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://50x.ing" target="_blank" rel="noopener noreferrer" class="company-card">
+            <div class="company-icon-placeholder">50X</div>
+            <div class="company-info">
+                <div class="company-name">50X</div>
+                <div class="company-url">50x.ing</div>
+                <p class="company-desc">An always-on macOS meeting recorder with AI summaries, VoicePrint speaker identification, and a knowledge graph that links spoken decisions to written documentation across Slack, Notion, and Linear.</p>
+                <div class="company-tags">
+                    <span class="company-tag">macOS</span>
+                    <span class="company-tag">Productivity</span>
+                    <span class="company-tag">AI</span>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://matrix.watch" target="_blank" rel="noopener noreferrer" class="company-card">
+            <img src="images/matrixdesktop-icon.png" alt="Matrix Desktop" class="company-icon">
+            <div class="company-info">
+                <div class="company-name">Matrix Desktop</div>
+                <div class="company-url">matrix.watch</div>
+                <p class="company-desc">A macOS app that renders film-accurate Matrix digital rain as a live desktop wallpaper and screensaver. 12 presets, multi-monitor support, and 60fps Metal rendering on 5K displays.</p>
+                <div class="company-tags">
+                    <span class="company-tag">macOS</span>
+                    <span class="company-tag">Screensaver</span>
+                    <span class="company-tag">Metal</span>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://www.sitecapture.com" target="_blank" rel="noopener noreferrer" class="company-card">
+            <img src="images/sitecapture-icon.svg" alt="SiteCapture" class="company-icon">
+            <div class="company-info">
+                <div class="company-name">SiteCapture</div>
+                <div class="company-url">sitecapture.com</div>
+                <p class="company-desc">An AI-powered field operations platform that streamlines jobsite documentation, quality control, and project reporting for solar, construction, and property management companies.</p>
+                <div class="company-tags">
+                    <span class="company-tag">SaaS</span>
+                    <span class="company-tag">Field Operations</span>
+                    <span class="company-tag">AI</span>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://djfunboy.com" target="_blank" rel="noopener noreferrer" class="company-card">
+            <img src="images/djfunboy-icon.svg" alt="DJ Fun Boy" class="company-icon">
+            <div class="company-info">
+                <div class="company-name">DJ Fun Boy</div>
+                <div class="company-url">djfunboy.com</div>
+                <p class="company-desc">A design-system extraction engine and reference library. Point it at any website or app and it produces complete, replicable design documentation — colors, typography, spacing, and component patterns — alongside a browsable gallery of curated systems.</p>
+                <div class="company-tags">
+                    <span class="company-tag">Web</span>
+                    <span class="company-tag">Design Systems</span>
+                    <span class="company-tag">Developer Tools</span>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://designdaddy.ai" target="_blank" rel="noopener noreferrer" class="company-card">
+            <img src="images/designdaddy-icon.svg" alt="Design Daddy" class="company-icon">
+            <div class="company-info">
+                <div class="company-name">Design Daddy</div>
+                <div class="company-url">designdaddy.ai</div>
+                <p class="company-desc">An AI logo creator that's a taste-compounding process, not a one-shot generator. Start from a curated wall of real app icons, refine over rounds as it learns your taste, and leave with the one — delivered as editable SVG code, not a flat image.</p>
+                <div class="company-tags">
+                    <span class="company-tag">Web</span>
+                    <span class="company-tag">AI</span>
+                    <span class="company-tag">Design</span>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://jointchiefs.ai" target="_blank" rel="noopener noreferrer" class="company-card">
+            <img src="images/jointchiefs-icon.png" alt="Joint Chiefs" class="company-icon">
+            <div class="company-info">
+                <div class="company-name">Joint Chiefs</div>
+                <div class="company-url">jointchiefs.ai</div>
+                <p class="company-desc">An open-source MCP server for multi-model code review. It runs your code past OpenAI, Anthropic, Gemini, Grok, and local models in parallel, then makes them debate across rounds until a moderator writes a single consensus — higher-confidence review than any one model gives itself.</p>
+                <div class="company-tags">
+                    <span class="company-tag">Developer Tools</span>
+                    <span class="company-tag">MCP</span>
+                    <span class="company-tag">Open Source</span>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://pongo.ing" target="_blank" rel="noopener noreferrer" class="company-card">
+            <img src="images/pongo-icon.png" alt="Pongo" class="company-icon">
+            <div class="company-info">
+                <div class="company-name">Pongo</div>
+                <div class="company-url">pongo.ing</div>
+                <p class="company-desc">An iOS app for coordinating real-world mahjong games with friends. Connect with friends, propose a game with a date and time, and cascade-invite until four players say yes — with per-game chat, calendar lock-in, and support for multiple mahjong styles.</p>
+                <div class="company-tags">
+                    <span class="company-tag">iOS</span>
+                    <span class="company-tag">Social</span>
+                    <span class="company-tag">Games</span>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Outergy Group, LLC. All rights reserved. &middot; <a href="privacy.html">Privacy</a></p>
+        <span>Austin, TX</span>
+    </footer>
+</body>
+</html>

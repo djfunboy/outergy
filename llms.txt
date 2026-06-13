@@ -1,0 +1,27 @@
+# Outergy
+
+> Outergy is the holding company for consumer and professional-developer apps built by Chris Doyle.
+
+Outergy Group, LLC builds and operates a portfolio of software products spanning macOS, iOS, tvOS, and the web — clipboard and screen-capture tools, meeting reminders, health tracking, office display software, design tools, and developer tools. Each product has its own website with full feature documentation; outergy.com is the portfolio-level surface for press, partners, and acquirers.
+
+## Companies
+
+- [Stash](https://yourstash.ai): macOS menu bar app combining clipboard history with screenshot annotation
+- [Remind](https://remind.ing): macOS app for full-screen meeting reminders with AI attendee briefings
+- [Degree Daddy](https://degreedaddy.com): Cold plunge and sauna tracker for iPhone, iPad, and Apple Watch
+- [Dance Party](https://danceparty.ai): Widget platform for Apple TV office displays
+- [50X](https://50x.ing): Always-on macOS meeting recorder with AI summaries and a knowledge graph
+- [Matrix Desktop](https://matrix.watch): Film-accurate Matrix digital rain wallpaper and screensaver for macOS
+- [SiteCapture](https://www.sitecapture.com): AI-powered field operations platform for jobsite documentation
+- [DJ Fun Boy](https://djfunboy.com): Design-system extraction engine and reference library
+- [Design Daddy](https://designdaddy.ai): AI logo creator that delivers editable SVG logos
+- [Joint Chiefs](https://jointchiefs.ai): Open-source MCP server for multi-model code review
+- [Pongo](https://pongo.ing): iOS app for coordinating real-world mahjong games with friends
+
+## Facts
+
+- Legal name: Outergy Group, LLC
+- Founder: Chris Doyle
+- Location: Austin, TX
+- Contact: chris@outergy.com
+- Website: https://outergy.com

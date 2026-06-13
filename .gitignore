@@ -1,0 +1,14 @@
+.env
+.env.*
+*.pem
+*.key
+*.p12
+.DS_Store
+node_modules/
+credentials*
+.netlify/
+.claude/
+
+# Internal agent docs — kept local, not published
+CLAUDE.md
+AGENTS.md
